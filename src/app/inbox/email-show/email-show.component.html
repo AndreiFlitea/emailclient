@@ -1,0 +1,22 @@
+<div class="header">
+  <div>
+    <div>
+      <h3>{{ emailShow.subject | json }}</h3>
+    </div>
+
+    <div>
+      From: <i> {{ emailShow.from }}</i>
+    </div>
+    <div>
+      To: <i>{{ emailShow.to }}</i>
+    </div>
+  </div>
+  <div>
+    <app-email-reply [emailReply]="emailShow"></app-email-reply>
+  </div>
+</div>
+
+<div class="ui divider"></div>
+
+<!-- show the html in email using bound property -->
+<div [innerHTML]="emailShow.html"><!--{{ email.html }}--></div>

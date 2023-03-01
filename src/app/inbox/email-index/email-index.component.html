@@ -1,0 +1,14 @@
+<div class="ui called list">
+  <div class="item" *ngFor="let email of emailList">
+    <a [id]="email.id" [routerLink]="email.id" routerLinkActive="active">
+      <div class="ui divider"></div>
+      <div class="content">
+        <div class="header trim">
+          {{ email.subject }}
+        </div>
+        <p class="trim">{{ email.from }}</p>
+      </div>
+      <div class="ui divider"></div>
+    </a>
+  </div>
+</div>
